@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'app.css' %}">
+    <title>Danceability Calculator</title>
+</head>
+<body>
+<main class="container">
+    <h1>Danceability Calculator</h1>
+    <div class="wrapper">
+        <section>
+            <form action="/" method="post">
+                <fieldset>
+                    <label for="energy">Energy</label>
+                    <input type="number" name="energy" id="energy" min="0" max="1" step=".1" value="{{energy}}">
+                </fieldset>
+                <fieldset>
+                    <label for="valence">Valence</label>
+                    <input type="number" name="valence" id="valence" min="0" max="1" step=".1" value="{{valence}}">
+                </fieldset>
+                <fieldset>
+                    <label for="acousticness">Acousticness</label>
+                    <input type="number" name="acousticness" id="acousticness" min="0" max="1" step=".1"
+                           value="{{acousticness}}">
+                </fieldset>
+                <fieldset>
+                    <label for="liveness">Liveness</label>
+                    <input type="number" name="liveness" id="liveness" min="0" max="1" step=".1" value="{{liveness}}">
+                </fieldset>
+                <input type="submit" value="Calculate">
+            </form>
+        </section>
+        <section class="prediction-section">
+            {% if prediction and predictionPercent %}
+                <div class="prediction-percent-wrapper">
+                    <span class="prediction-percent-content">{{ predictionPercent }}%</span>
+                    <svg width="50" height="50" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="30" pathLength="1" class="bg"/>
+                        <circle cx="50" cy="50" r="30" pathLength="1" class="progress-bg"/>
+                        <circle cx="50" cy="50" r="30" pathLength="1" class="progress" style="stroke-dasharray: {{prediction}}, 1"/>
+                    </svg>
+                </div>
+                <p class="prediction">Your song is {{ predictionPercent }}% danceable</p>
+            {% endif %}
+        </section>
+    </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,137 @@
+:root {
+    --primary-color: #f46036;
+    --secondary-color: #de552f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    accent-color: var(--primary-color);
+    outline-color: var(--primary-color);
+}
+
+*:focus {
+    outline-color: var(--primary-color);
+}
+
+h1 {
+    margin-bottom: .5em;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 50px 0;
+}
+
+/**
+ * Wrapper
+ */
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+}
+
+
+/**
+ * Forms
+ */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    gap: .25rem;
+    border: none;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+input {
+    padding: .5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input[type='submit'] {
+    width: max-content;
+    padding: .5rem 1rem;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out;
+}
+
+input[type='submit']:hover {
+    background-color: var(--secondary-color);
+}
+
+/**
+ * Progress
+ */
+
+svg {
+    transform: rotate(-90deg);
+    height: 300px;
+    width: 300px;
+}
+
+circle {
+    stroke-dashoffset: 0;
+    stroke-width: 15%;
+    fill: none;
+}
+
+.progress {
+    stroke: var(--secondary-color);
+    stroke-dasharray: 0, 1;
+    stroke-width: 5%;
+}
+
+.progress-bg {
+    stroke: rgba(0, 0, 0, .05);
+    stroke-dasharray: 1, 1;
+    stroke-width: 5%;
+}
+
+.prediction-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.prediction-percent-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.prediction-percent-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
