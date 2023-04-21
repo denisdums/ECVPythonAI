@@ -12,7 +12,7 @@
 This project is a simple example of a machine learning project. 
 The goal is to predict the danceability of a song.
 
-The data is taken from [Kaggle](https://www.kaggle.com/yamaerenay/spotify-dataset-19212020-160k-tracks).
+The data is taken from [Kaggle](https://www.kaggle.com/datasets/maharshipandya/-spotify-tracks-dataset?select=dataset.csv).
 
 After a first analysis, we can see that the data is not very clean.
 We have to do some cleaning before we can use it.
