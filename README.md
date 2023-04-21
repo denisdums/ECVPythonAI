@@ -23,7 +23,7 @@ And after a second analysis, we can see 4 points that are important for the pred
 - liveness
 - valence
 
-We use the XGBoost algorithm to train the model.
+We use the XGBoost Regressor algorithm to train the model.
 The model is saved in `resources/xgb.json`.
 
 After that, we create a simple API with FastAPI.
