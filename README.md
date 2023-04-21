@@ -20,3 +20,6 @@ Run [Notebook-XGBoost](notebooks/Notebook-XGBoost.ipynb). then `resources/xgb.js
 
 ## Analysis
 For learn the analysis, please read the [Notebook-DataAnalyse](notebooks/Notebook-DataAnalyse.ipynb).
+
+## Screenshots
+![Screenshot](docs/screenshot.png)

@@ -37,16 +37,36 @@
         </section>
         <section class="prediction-section">
             {% if prediction and predictionPercent %}
-                <div class="prediction-percent-wrapper">
-                    <span class="prediction-percent-content">{{ predictionPercent }}%</span>
-                    <svg width="50" height="50" viewBox="0 0 100 100">
-                        <circle cx="50" cy="50" r="30" pathLength="1" class="bg"/>
-                        <circle cx="50" cy="50" r="30" pathLength="1" class="progress-bg"/>
-                        <circle cx="50" cy="50" r="30" pathLength="1" class="progress" style="stroke-dasharray: {{prediction}}, 1"/>
-                    </svg>
-                </div>
-                <p class="prediction">Your song is {{ predictionPercent }}% danceable</p>
+            <div class="prediction-percent-wrapper">
+                <span class="prediction-percent-content">{{ predictionPercent }}%</span>
+                <svg width="50" height="50" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="30" pathLength="1" class="bg"/>
+                    <circle cx="50" cy="50" r="30" pathLength="1" class="progress-bg"/>
+                    <circle cx="50" cy="50" r="30" pathLength="1" class="progress"
+                            style="stroke-dasharray: {{prediction}}, 1"/>
+                </svg>
+            </div>
+            <p class="prediction">Your song is {{ predictionPercent }}% danceable</p>
             {% endif %}
+        </section>
+        <section class="word-explanations">
+            <ul>
+                <li>
+                    <p><strong>Energy:</strong> the energy of the music, i.e. the power of the music (0.0 = weak, 1.0 =
+                        very energetic)</p>
+                </li>
+                <li>
+                    <p><strong>Valence:</strong> the positivity of the music (0.0 = negative, 1.0 = positive)</p>
+                </li>
+                <li>
+                    <p><strong>Acousticness:</strong> the presence of acoustic instruments in the music (0.0 = no
+                        acoustic instruments, 1.0 = many acoustic instruments)</p>
+                </li>
+                <li>
+                    <p><strong>Liveness:</strong> the presence of an audience in the music (0.0 = no audience, 1.0 = a
+                        lot of audience)</p>
+                </li>
+            </ul>
         </section>
     </div>
 </main>

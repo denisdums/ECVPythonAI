@@ -1,4 +1,3 @@
-from typing import Union
 from fastapi import FastAPI, Request
 import pandas as pd
 import xgboost as xg

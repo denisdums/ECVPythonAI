@@ -35,7 +35,8 @@ h1 {
 .wrapper {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 2rem;
+    column-gap: 3rem;
+    row-gap: 5rem;
 }
 
 
@@ -134,4 +135,19 @@ circle {
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
+}
+
+.word-explanations {
+    grid-column: span 2 / span 2;
+    font-size: .85rem;
+}
+
+.word-explanations ul{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.word-explanations li::marker {
+    color: var(--primary-color);
 }
